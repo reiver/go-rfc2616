@@ -6,25 +6,7 @@ import (
 	"sourcecode.social/reiver/go-rfc2616/separator"
 )
 
-// Bytes returns the 'Method', as defiend by IETF RFC-2616.
-//
-//	 Method          = "OPTIONS"
-//	                 | "GET"
-//	                 | "HEAD"
-//	                 | "POST"
-//	                 | "PUT"
-//	                 | "DELETE"
-//	                 | "TRACE"
-//	                 | "CONNECT"
-//	                 | extension-method
-//
-//	extension-method = token
-//
-// Which, in practice, can be simplified to:
-//
-//	 Method          = token
-//
-// And 'token' is defined as:
+// Bytes returns the 'token', as defiend by IETF RFC-2616.
 //
 //	token            = 1*<any CHAR except CTLs or separators>
 //
