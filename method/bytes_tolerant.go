@@ -1,5 +1,9 @@
 package method
 
+import (
+	"sourcecode.social/reiver/go-rfc2616/sp"
+)
+
 func BytesTolerant(p []byte) (result []byte, rest []byte, ok bool) {
 
 	if len(p) <= 0 {
@@ -9,14 +13,14 @@ func BytesTolerant(p []byte) (result []byte, rest []byte, ok bool) {
 	{
 		p0 := p[0]
 
-		if ' ' == p0 || '\t' == p0 || '\r' == p0 || '\n' == p0 {
+		if sp.ByteIsTolerant(p0) || '\r' == p0 || '\n' == p0 {
 			return nil, p, false
 		}
 	}
 
 	{
 		for i,b := range p {
-			if ' ' == b || '\t' == b || '\r' == b || '\n' == b {
+			if sp.ByteIsTolerant(p0) || '\r' == p0 || '\n' == p0 {
 				return p[:i], p[i:], true
 			}
 		}
