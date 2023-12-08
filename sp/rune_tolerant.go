@@ -1,13 +1,13 @@
 package sp
 
-// RuneIsSpacingTolerant is a more tolerant version of RuneIsSpacing.
-// Where RuneIsSpacing only returns whether the rune is a 'SP' (spacing) character, as defined by IETF RFC-2616:
+// RuneIsTolerant is a more tolerant version of RuneIs.
+// Where RuneIs only returns whether the rune is a 'SP' (spacing) character, as defined by IETF RFC-2616:
 //
 //      SP = <US-ASCII SP, space (32)>
 //
-// RuneIsSpacingTolerant also allows:
+// RuneIsTolerant also allows:
 //
 //	HT = <US-ASCII HT, horizontal-tab (9)>
-func RuneIsSpacingTolerant(value rune) bool {
+func RuneIsTolerant(value rune) bool {
 	return ' ' == value || '\t' == value
 }

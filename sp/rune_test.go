@@ -6,7 +6,7 @@ import (
 	"sourcecode.social/reiver/go-rfc2616/sp"
 )
 
-func TestRuneIsSpacing(t *testing.T) {
+func TestRuneIs(t *testing.T) {
 
 	tests := []struct{
 		Value rune
@@ -1077,7 +1077,7 @@ func TestRuneIsSpacing(t *testing.T) {
 
 	for testNumber, test := range tests {
 
-		actual := sp.RuneIsSpacing(test.Value)
+		actual := sp.RuneIs(test.Value)
 
 		expected := test.Expected
 

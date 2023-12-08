@@ -6,7 +6,7 @@ import (
 	"sourcecode.social/reiver/go-rfc2616/sp"
 )
 
-func TestByteIsSpacingTolerant(t *testing.T) {
+func TestByteIsTolerant(t *testing.T) {
 
 	tests := []struct{
 		Value byte
@@ -1077,7 +1077,7 @@ func TestByteIsSpacingTolerant(t *testing.T) {
 
 	for testNumber, test := range tests {
 
-		actual := sp.ByteIsSpacingTolerant(test.Value)
+		actual := sp.ByteIsTolerant(test.Value)
 
 		expected := test.Expected
 
