@@ -134,6 +134,25 @@ func TestSkipTolerant(t *testing.T) {
 			Value: []byte("  \t\t 😈 :-)\r\n"),
 			Expected:     []byte("😈 :-)\r\n"),
 		},
+
+
+
+		{
+			Value:    []byte("once :-)\r\n"),
+			Expected: []byte("once :-)\r\n"),
+		},
+		{
+			Value:    []byte("twice 😈 *-*\n"),
+			Expected: []byte("twice 😈 *-*\n"),
+		},
+		{
+			Value:    []byte("thrice 🙂"),
+			Expected: []byte("thrice 🙂"),
+		},
+		{
+			Value:    []byte("fource 👾"),
+			Expected: []byte("fource 👾"),
+		},
 	}
 
 	for testNumber, test := range tests {
