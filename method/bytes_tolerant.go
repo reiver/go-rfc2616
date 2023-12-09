@@ -20,7 +20,7 @@ func BytesTolerant(p []byte) (result []byte, rest []byte, ok bool) {
 
 	{
 		for i,b := range p {
-			if sp.ByteIsTolerant(p0) || '\r' == p0 || '\n' == p0 {
+			if sp.ByteIsTolerant(b) || '\r' == b || '\n' == b {
 				return p[:i], p[i:], true
 			}
 		}
